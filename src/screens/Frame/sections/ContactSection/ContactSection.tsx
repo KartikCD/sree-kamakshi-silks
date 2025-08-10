@@ -15,17 +15,17 @@ export const ContactSection = (): JSX.Element => {
 
   // Quick links data
   const quickLinks = [
-    { title: "Home", link: "/" },
+    { title: "Home", link: "#home" },
     { title: "About Us", link: "#aboutUs" },
     { title: "Services", link: "#services" },
-    { title: "Reviews", link: "#reviews" },
+    { title: "Collections", link: "#collections" },
     { title: "Contact", link: "#contactUs" },
   ];
 
   return (
-    <footer className="w-full bg-[#483d8b] py-12">
+    <footer className="w-full bg-[#483d8b] py-14" id="contactUs">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
           {/* Company Info Column */}
           <div className="flex flex-col space-y-6">
             <div className="bg-white p-2 rounded-lg w-16 h-16 flex items-center justify-center">
@@ -36,73 +36,39 @@ export const ContactSection = (): JSX.Element => {
               />
             </div>
 
-            <p className="font-normal text-white text-lg leading-6">
+            <p className="font-normal text-white text-xl leading-7">
               {companyInfo.description}
             </p>
 
             <div className="flex space-x-6">
-              <FacebookIcon className="w-5 h-5 text-white transition-all duration-200 hover:text-[#c1272d] cursor-pointer" />
-              <TwitterIcon className="w-5 h-5 text-white transition-all duration-200 hover:text-[#c1272d] cursor-pointer" />
-              <InstagramIcon className="w-5 h-5 text-white transition-all duration-200 hover:text-[#c1272d] cursor-pointer" />
-              <YoutubeIcon className="w-5 h-5 text-white transition-all duration-200 hover:text-[#c1272d] cursor-pointer" />
+              <FacebookIcon className="w-6 h-6 text-white transition-all duration-200 hover:text-[#c1272d] cursor-pointer" />
+              <TwitterIcon className="w-6 h-6 text-white transition-all duration-200 hover:text-[#c1272d] cursor-pointer" />
+              <InstagramIcon className="w-6 h-6 text-white transition-all duration-200 hover:text-[#c1272d] cursor-pointer" />
+              <YoutubeIcon className="w-6 h-6 text-white transition-all duration-200 hover:text-[#c1272d] cursor-pointer" />
             </div>
           </div>
 
           {/* Quick Links Column */}
           <div className="flex flex-col space-y-4">
-            <h3 className="font-bold text-white text-xl leading-6">
+            <h3 className="font-bold text-white text-2xl leading-7">
               Quick Links
             </h3>
 
             <div className="flex flex-col space-y-4 mt-4">
               {quickLinks.map((link, index) => (
-                <div key={index} className="h-6">
-                  <div className="font-normal text-white text-lg leading-6 transition-all duration-200 hover:text-[#c1272d]">
+                <div key={index} className="h-7">
+                  <div className="font-normal text-white text-xl leading-7 transition-all duration-200 hover:text-[#c1272d]">
                     <a href={link.link}>{link.title}</a>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-
-          {/* Collections Column */}
-          {/* <div className="flex flex-col space-y-4">
-            <h3 className="font-bold text-white text-lg leading-[18px]">
-              Collections
-            </h3>
-
-            <div className="flex flex-col space-y-4 mt-4">
-              {collections.map((collection, index) => (
-                <div key={index} className="h-6">
-                  <div className="font-normal text-white text-base leading-4">
-                    {collection.title}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div> */}
-
-          {/* Legal Column */}
-          {/* <div className="flex flex-col space-y-4">
-            <h3 className="font-bold text-white text-lg leading-[18px]">
-              Legal
-            </h3>
-
-            <div className="flex flex-col space-y-4 mt-4">
-              {legalLinks.map((link, index) => (
-                <div key={index} className="h-6">
-                  <div className="font-normal text-white text-base leading-4">
-                    {link.title}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div> */}
         </div>
 
         {/* Copyright Section */}
         <div className="mt-12 pt-6 border-t border-[#9370db] flex justify-center">
-          <div className="font-normal text-white text-lg text-center leading-6">
+          <div className="font-normal text-white text-xl text-center leading-7">
             © 2025 Sree Kamakshi Silks. All Rights Reserved.
           </div>
         </div>

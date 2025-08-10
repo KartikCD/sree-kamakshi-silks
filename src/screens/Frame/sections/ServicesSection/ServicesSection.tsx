@@ -29,7 +29,9 @@ export const ServicesSection = (): JSX.Element => {
                 Handcrafted with love for generations
               </p>
 
-              <Button className="bg-[#c1272d] hover:bg-[#c1272d]/90 text-white font-normal text-lg px-8 py-3.5 rounded-md font-sans">
+              <Button className="bg-[#c1272d] hover:bg-[#c1272d]/90 text-white font-normal text-xl px-9 py-4 rounded-md font-sans"
+                onClick={() => (window.location.hash = "#collections")}
+              >
                 Explore Collection
               </Button>
             </div>

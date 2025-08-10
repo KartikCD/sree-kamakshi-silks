@@ -16,27 +16,6 @@ export const HeroSection = (): JSX.Element => {
       ],
     },
     {
-      id: 2,
-      icon: "/custom_design.svg",
-      title: "Custom Designs",
-      description: [
-        "Our design team works closely with weavers",
-        "to create exclusive designs for special",
-        "occasions. We can customize sarees",
-        "according to your preferences.",
-      ],
-    },
-    {
-      id: 3,
-      icon: "/shipping.svg",
-      title: "Worldwide Shipping",
-      description: [
-        "We offer secure and reliable shipping",
-        "services worldwide, ensuring your precious",
-        "silk sarees reach you in perfect condition.",
-      ],
-    },
-    {
       id: 4,
       icon: "/stitching.svg",
       title: "Blouse Stitching",
@@ -71,13 +50,13 @@ export const HeroSection = (): JSX.Element => {
   ];
 
   return (
-    <section id="services" className="py-16 px-4 flex justify-center items-center bg-white">
+    <section id="services" className="py-18 px-5 flex justify-center items-center bg-white">
       <div className="max-w-7xl w-full">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-[#483d8b] mb-6 font-sans">
+          <h2 className="text-6xl font-bold text-[#483d8b] mb-6 font-sans">
             Our Services
           </h2>
-          <p className="text-lg text-[#333333] max-w-xl mx-auto font-sans">
+          <p className="text-xl text-[#333333] max-w-xl mx-auto font-sans">
             We offer a range of services to ensure you find the perfect silk
             saree for every occasion.
           </p>
@@ -89,22 +68,22 @@ export const HeroSection = (): JSX.Element => {
               key={service.id}
               className="rounded-lg border-t-4 border-[#c1272d] shadow-[0px_4px_6px_#0000001a,0px_2px_4px_#0000001a] border-t-solid border-x-0 border-b-0 transition-all duration-300 hover:shadow-xl"
             >
-              <CardContent className="p-6">
+              <CardContent className="p-7">
                 <div className="mb-4">
-                  <div className="flex w-10 h-9 items-center justify-center">
+                  <div className="flex w-12 h-10 items-center justify-center">
                     <img
-                      className="w-auto h-9"
+                      className="w-auto h-10"
                       alt={service.title}
                       src={service.icon}
                     />
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-bold text-[#483d8b] mb-4 font-sans">
+                <h3 className="text-3xl font-bold text-[#483d8b] mb-4 font-sans">
                   {service.title}
                 </h3>
 
-                <div className="text-[#333333] text-lg font-sans">
+                <div className="text-[#333333] text-xl font-sans">
                   {service.description.map((line, index) => (
                     <p key={index} className="mb-1">
                       {line}

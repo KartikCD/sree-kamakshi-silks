@@ -13,19 +13,23 @@ export const NavigationSection = (): JSX.Element => {
 
   // Navigation menu items data
   const navItems = [
-    { label: "Home", href: "#", position: "left-0" },
+    { label: "Home", href: "#home", position: "left-0" },
     { label: "About Us", href: "#aboutUs", position: "left-[149px]" },
-    { label: "Services", href: "#", position: "left-[251px]" },
-    { label: "Reviews", href: "#", position: "left-[350px]" },
+    { label: "Services", href: "#services", position: "left-[251px]" },
+    { label: "Collections", href: "#collections", position: "left-[350px]" },
     { label: "Contact", href: "#contactUs", position: "left-[446px]" },
   ];
+
+  const goToCollections = () => {
+    window.location.hash = "#collections";
+  };
 
   return (
     <header className="w-full bg-white shadow-[0px_4px_6px_#0000001a,0px_2px_4px_#0000001a]">
       <div className="mx-auto max-w-[1280px] px-4 flex flex-col">
         <div className="h-[88px] flex items-center justify-between transition-all duration-300 hover:shadow-lg animate-slide-in-left">
           {/* Logo */}
-          <div className="h-16">
+          <div className="h-16 cursor-pointer" onClick={() => (window.location.hash = "#home") }>
             <img
               src="/logo.png"
               alt="Sree Kamakshi Silks Logo"
@@ -39,21 +43,21 @@ export const NavigationSection = (): JSX.Element => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <X className="h-6 w-6 text-[#483d8b]" />
+              <X className="h-7 w-7 text-[#483d8b]" />
             ) : (
-              <Menu className="h-6 w-6 text-[#483d8b]" />
+              <Menu className="h-7 w-7 text-[#483d8b]" />
             )}
           </button>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center">
             <NavigationMenu>
-              <NavigationMenuList className="flex gap-8">
+              <NavigationMenuList className="flex gap-9">
                 {navItems.map((item, index) => (
                   <NavigationMenuItem key={index}>
                     <NavigationMenuLink
                       href={item.href}
-                      className="font-medium text-[#483d8b] text-lg leading-5 transition-all duration-200 hover:text-[#c1272d] font-sans"
+                      className="font-medium text-[#483d8b] text-xl leading-6 transition-all duration-200 hover:text-[#c1272d] font-sans"
                     >
                       {item.label}
                     </NavigationMenuLink>
@@ -63,7 +67,7 @@ export const NavigationSection = (): JSX.Element => {
             </NavigationMenu>
 
             {/* Shop Now button */}
-            <Button className="ml-8 bg-[#c1272d] text-white rounded-md h-10 px-6 font-normal text-lg transition-all duration-200 hover:bg-[#c1272d]/90 font-sans">
+            <Button onClick={goToCollections} className="ml-8 bg-[#c1272d] text-white rounded-md h-11 px-7 font-normal text-xl transition-all duration-200 hover:bg-[#c1272d]/90 font-sans">
               Shop Now
             </Button>
           </div>
@@ -80,13 +84,14 @@ export const NavigationSection = (): JSX.Element => {
               <a
                 key={index}
                 href={item.href}
-                className="font-medium text-[#483d8b] text-lg py-2 px-4 hover:bg-[#483d8b]/10 rounded-md transition-all duration-200 font-sans"
+                className="font-medium text-[#483d8b] text-xl py-3 px-4 hover:bg-[#483d8b]/10 rounded-md transition-all duration-200 font-sans"
+                onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </a>
             ))}
             <div className="pt-4">
-              <Button className="w-full bg-[#c1272d] text-white rounded-md h-10 px-6 font-normal text-lg transition-all duration-200 hover:bg-[#c1272d]/90 font-sans">
+              <Button onClick={goToCollections} className="w-full bg-[#c1272d] text-white rounded-md h-11 px-7 font-normal text-xl transition-all duration-200 hover:bg-[#c1272d]/90 font-sans">
                 Shop Now
               </Button>
             </div>
