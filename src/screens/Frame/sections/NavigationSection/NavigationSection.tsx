@@ -8,27 +8,51 @@ import {
 import { Menu, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
+const getHrefPrefix = () => {
+  if (window.location.pathname === "/collections") {
+    return "/#";
+  }
+  return "#";
+};
+
 export const NavigationSection = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
 
+  console.log(getHrefPrefix());
   // Navigation menu items data
   const navItems = [
-    { label: "Collections", href: "/collections", position: "left-0" },
-    { label: "About Us", href: "#aboutUs", position: "left-[251px]" },
-    { label: "Services", href: "#services", position: "left-[350px]" },
-    { label: "Reviews", href: "#reviews", position: "left-[446px]" },
-    { label: "Contact", href: "#contactUs", position: "left-[542px]" },
+    { label: "Collections", href: `/collections`, position: "left-0" },
+    {
+      label: "About Us",
+      href: `${getHrefPrefix()}aboutUs`,
+      position: "left-[251px]",
+    },
+    {
+      label: "Services",
+      href: `${getHrefPrefix()}services`,
+      position: "left-[350px]",
+    },
+    {
+      label: "Reviews",
+      href: `${getHrefPrefix()}reviews`,
+      position: "left-[446px]",
+    },
+    {
+      label: "Contact",
+      href: `${getHrefPrefix()}contactUs`,
+      position: "left-[542px]",
+    },
   ];
 
   const handleNavigation = (href: string) => {
-    if (href.startsWith('/')) {
+    if (href.startsWith("/")) {
       navigate(href);
     } else {
       // For anchor links, scroll to section
       const element = document.querySelector(href);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
     setIsMenuOpen(false);
@@ -39,7 +63,7 @@ export const NavigationSection = (): JSX.Element => {
       <div className="mx-auto max-w-[1280px] px-4 flex flex-col">
         <div className="h-[88px] flex items-center justify-between transition-all duration-300 hover:shadow-lg animate-slide-in-left">
           {/* Logo */}
-          <div className="h-16 cursor-pointer" onClick={() => navigate('/')}>
+          <div className="h-16 cursor-pointer" onClick={() => navigate("/")}>
             <img
               src="/logo.png"
               alt="Sree Kamakshi Silks Logo"
