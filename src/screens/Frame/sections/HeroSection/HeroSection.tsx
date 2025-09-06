@@ -17,12 +17,12 @@ export const HeroSection = (): JSX.Element => {
     },
     {
       id: 2,
-      icon: "/stitching.svg",
-      title: "Blouse Stitching",
+      icon: "/shipping.svg",
+      title: "Worldwide Shipping",
       description: [
-        "Our expert tailors can stitch custom blouses",
-        "to match your saree, ensuring a perfect fit",
-        "and coordinated look for your ensemble.",
+        "We offer secure and reliable shipping",
+        "services worldwide, ensuring your precious",
+        "silk sarees reach you in perfect condition.",
       ],
     },
     {

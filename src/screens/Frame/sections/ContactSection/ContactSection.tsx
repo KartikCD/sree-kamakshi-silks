@@ -18,7 +18,7 @@ export const ContactSection = (): JSX.Element => {
 
   // Quick links data
   const quickLinks = [
-    { title: "Collections", link: "/collections" },
+    // { title: "Collections", link: "/collections" },
     { title: "About Us", link: "#aboutUs" },
     { title: "Services", link: "#services" },
     { title: "Reviews", link: "#reviews" },

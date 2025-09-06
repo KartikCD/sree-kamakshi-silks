@@ -22,7 +22,7 @@ export const NavigationSection = (): JSX.Element => {
   console.log(getHrefPrefix());
   // Navigation menu items data
   const navItems = [
-    { label: "Collections", href: `/collections`, position: "left-0" },
+    // { label: "Collections", href: `/collections`, position: "left-0" },
     {
       label: "About Us",
       href: `${getHrefPrefix()}aboutUs`,

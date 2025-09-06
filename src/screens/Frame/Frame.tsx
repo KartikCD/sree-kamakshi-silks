@@ -13,7 +13,7 @@ export const Frame = (): JSX.Element => {
     <div className="flex flex-col w-full bg-white border-2 border-solid border-[#ced4da]">
       <NavigationSection />
       <ServicesSection />
-      <ProductGallerySection />
+      {/* <ProductGallerySection /> */}
       <MainContentSection />
       <HeroSection />
       <TestimonialsSection />

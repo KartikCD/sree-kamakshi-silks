@@ -47,7 +47,7 @@ export const AboutUsSection = (): JSX.Element => {
     },
     {
       icon: <MailIcon className="w-4 h-4" style={{ color: "#C1272D" }} />,
-      content: "sreekamakshisilks@gmail.com",
+      content: "sreekamakshisilks13@gmail.com",
       key: "email",
     },
     {

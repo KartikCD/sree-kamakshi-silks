@@ -11,13 +11,13 @@ createRoot(document.getElementById("app")).render(
     <Router>
       <Routes>
         <Route path="/" element={<Frame />} />
-        <Route path="/collections" element={
+        {/* <Route path="/collections" element={
           <div className="flex flex-col w-full bg-white border-2 border-solid border-[#ced4da]">
             <NavigationSection />
             <Collections />
             <ContactSection />
           </div>
-        } />
+        } /> */}
       </Routes>
     </Router>
   </StrictMode>,
